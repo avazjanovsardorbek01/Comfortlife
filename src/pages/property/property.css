@@ -1,0 +1,27 @@
+.view_more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 0 45px 35px #fff;
+  z-index: 10;
+}
+
+.view_more_btn {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 55px;
+  width: 215px;
+  z-index: 11;
+}/*# sourceMappingURL=property.css.map */

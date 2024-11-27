@@ -1,0 +1,19 @@
+.error {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.error-img {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  pointer-events: none;
+  margin: 0 auto;
+}
+.error-text {
+  text-align: center;
+  text-decoration: underline;
+}/*# sourceMappingURL=error.css.map */

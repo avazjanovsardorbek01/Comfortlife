@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: "100px";
+}
+
+.dropdown_item {
+  width: "100%";
+  margin: 0 !important;
+  background-color: lightgrey;
+  z-index: 10000;
+}
+.dropdown_item:hover {
+  -webkit-backdrop-filter: brightness(0.5);
+          backdrop-filter: brightness(0.5);
+}
+
+.set-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.offcanvas {
+  background-color: #212529 !important; /* Тёмный премиальный фон */
+  color: #fff; /* Белый текст */
+  font-family: "Roboto", sans-serif; /* Современный шрифт */
+  padding: 20px;
+}
+.offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Лёгкая линия разделения */
+  margin-bottom: 15px;
+}
+.offcanvas .offcanvas-header h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffbc35; /* Золотой заголовок */
+}
+.offcanvas .offcanvas-header .btn-close {
+  color: #ffbc35; /* Золотая кнопка закрытия */
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.offcanvas .offcanvas-header .btn-close:hover {
+  color: #facc15; /* Более светлый золотой при наведении */
+  opacity: 1;
+}
+.offcanvas .offcanvas-body .nav {
+  margin-top: 15px;
+}
+.offcanvas .offcanvas-body .nav .nav-item {
+  margin-bottom: 10px;
+}
+.offcanvas .offcanvas-body .nav .nav-item .nav-link {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.offcanvas .offcanvas-body .nav .nav-item .nav-link:hover {
+  background-color: #ffbc35; /* Золотой фон при наведении */
+  color: #212529; /* Тёмный текст */
+}
+.offcanvas .offcanvas-body .dropdown {
+  margin-top: 20px;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-toggle {
+  background-color: #ffbc35;
+  color: #212529;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-toggle:hover {
+  transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-toggle img {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-menu {
+  background-color: #212529;
+  border: 1px solid #ffbc35;
+  border-radius: 8px;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-menu .dropdown-item {
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #ffbc35;
+  color: #212529;
+}
+.offcanvas .offcanvas-body .dropdown .dropdown-menu .dropdown-item img {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+}/*# sourceMappingURL=navbar.css.map */

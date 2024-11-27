@@ -1,0 +1,47 @@
+@media screen and (max-width: 770px) {
+  .custom {
+    height: 40px !important;
+    padding: 10px !important;
+  }
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: "100px";
+}
+.dropdown_item {
+  width: "100%";
+  margin: 0 !important;
+  background-color: lightgrey;
+  &:hover {
+    backdrop-filter: brightness(0.5);
+  }
+}
+
+.view_more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 45px 35px #fff;
+  z-index: 10;
+}
+
+.view_more_btn {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 55px;
+  width: 215px;
+  z-index: 11;
+}

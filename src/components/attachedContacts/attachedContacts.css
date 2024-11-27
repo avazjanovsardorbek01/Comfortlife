@@ -1,0 +1,9 @@
+.custom-hover {
+  display: block;
+  transition: 200ms;
+}
+.custom-hover:hover {
+  background-color: #fff;
+  width: 100px !important;
+  height: 100px !important;
+}/*# sourceMappingURL=attachedContacts.css.map */

@@ -1,0 +1,52 @@
+.quickContact {
+  position: fixed;
+  bottom: 100px;
+  right: 120px;
+  z-index: 100;
+}
+
+.wrap {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60px;
+  width: 60px;
+}
+.wrap button {
+  background: #956D57;
+  cursor: pointer;
+  border: 2px solid #956D57;
+  color: white;
+  height: 100%;
+  width: 220%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  text-transform: uppercase;
+  font-family: "Muli-LightItalic", Helvetica;
+  font-size: 35px;
+  animation: ripple 1.5s linear infinite;
+  transition: all 0.7s ease;
+}
+.wrap button:hover {
+  transform: scale(1.1);
+}
+.wrap button:focus {
+  outline: none;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(149, 109, 87, 0.3), 0 0 0 1px rgba(149, 109, 87, 0.3), 0 0 0 3px rgba(149, 109, 87, 0.3), 0 0 0 5px rgba(149, 109, 87, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(149, 109, 87, 0.3), 0 0 0 4px rgba(149, 109, 87, 0.3), 0 0 0 20px rgba(149, 109, 87, 0), 0 0 0 30px rgba(149, 109, 87, 0);
+  }
+}/*# sourceMappingURL=quickContact.css.map */
