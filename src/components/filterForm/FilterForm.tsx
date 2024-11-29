@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslation } from "react-i18next";
 import { subrajon_list, kategoriya_obekta_list } from "./list";
 import { Link as Linking } from "react-scroll";
+import "./FilterForm.scss";
 interface IFilterForm {
   inputTitleStyle?: CSSProperties;
   offersFound: number;

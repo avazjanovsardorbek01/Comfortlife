@@ -16,10 +16,17 @@
     backdrop-filter: brightness(0.5);
   }
 }
+
 .set-top {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.offcanvas .nav-link:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 10px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .offcanvas {
   background-color: #f5f5f5; // Цвет фона
@@ -65,5 +72,10 @@
     &:hover {
       background-color: #f0f0f0;
     }
+  }
+}
+@media (max-width: 524px) {
+  .navbar-brand {
+    display: none;
   }
 }

@@ -48,7 +48,7 @@ const About = () => {
         img: poltoran_egor,
         name: t("Poltoran Egor"),
         position: t("director"),
-        description:  t("poltoran_egor_info"),
+        description: t("poltoran_egor_info"),
       },
       {
         img: mexa_gulyamova,
@@ -67,7 +67,7 @@ const About = () => {
         name: "Bauyetdinov Rauf",
         position: t("marketolog"),
         description: t("rauf_info"),
-      }
+      },
     ];
   }, [t]);
   useLayoutEffect(() => {
@@ -379,7 +379,6 @@ const About = () => {
                 >
                   {t("prev")}
                 </span>
-
                 <span
                   className="next"
                   data-controls="next"
@@ -405,10 +404,11 @@ const About = () => {
                 responsive={responsiveSettings}
                 duration={3000}
               >
-                {agents.map((agent) => {
-                  return (
+                {agents
+                  .filter((agent) => agent.name !== "Maminov Sanjar") // Фильтруем агента
+                  .map((agent) => (
                     <div className="item" key={agent.name}>
-                      <div className="h-100 person">
+                      <div className="person card">
                         <img
                           src={agent.img}
                           alt="Image"
@@ -420,8 +420,7 @@ const About = () => {
                             objectPosition: "center",
                           }}
                         />
-
-                        <div className="person-contents">
+                        <div className="person-contents d-flex flex-column">
                           <h2 className="mb-0">{agent.name}</h2>
                           <span className="meta d-block mb-3">
                             {agent.position}
@@ -430,8 +429,7 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                  );
-                })}
+                  ))}
               </Slide>
             </div>
           </div>

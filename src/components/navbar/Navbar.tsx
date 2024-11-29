@@ -16,9 +16,11 @@ function Navbar() {
   } = useTranslation();
   const { settings, saveSettings } = useSettings();
 
-  function changeLang(lang: supportedLangs) {
-    saveSettings({ ...settings, lang });
-    changeLanguage(lang);
+  function changeLang(lang: string) {
+    // Ensure lang is of type 'supportedLangs'
+    const validLang = lang as supportedLangs; // Casting the string to supportedLangs type
+    saveSettings({ ...settings, lang: validLang });
+    changeLanguage(validLang);
   }
 
   return (
@@ -82,7 +84,7 @@ function Navbar() {
               >
                 <NavLink
                   to={`/${item === "home" ? "" : item}`}
-                  className="nav-link"
+                  className="nav-link d-flex mb-2"
                   style={({ isActive }) =>
                     isActive
                       ? {
@@ -102,7 +104,7 @@ function Navbar() {
                 >
                   {t(item)}
                 </NavLink>
-                <hr className="dropdown-divider" />
+                {/* <hr className="dropdown-divider" /> */}
               </li>
             ))}
           </ul>
@@ -170,12 +172,13 @@ function Navbar() {
 
       {/* Main Navbar */}
       <nav
-        className="navbar navbar-expand-lg navbar-dark fixed-top shadow w-75 mt-5 m-auto"
+        className="navbar navbar-expand-lg navbar-dark fixed-top shadow"
         style={{
           backgroundColor: "#956D57",
-          borderLeft: "10px solid #5F312B",
-          borderRight: "10px solid #5F312B",
-          marginTop: "20px", // Отступ сверху для свободного пространства
+          width: "85%", // Увеличенная ширина
+          margin: "15px auto", // Центрирование и отступы сверху/снизу
+          borderRadius: "5px", // Скругление краев для красивого эффекта
+          padding: "10px", // Увеличенный внутренний отступ
         }}
       >
         <div className="container">
@@ -185,12 +188,13 @@ function Navbar() {
               src={TIcon}
               alt="Logo"
               className="me-2"
-              style={{ height: "40px" }}
+              style={{ height: "50px" }} // Увеличенный размер логотипа
             />
             <div>
               <span
+                className="navbar-brand"
                 style={{
-                  fontSize: "20px",
+                  fontSize: "24px", // Увеличенный размер шрифта заголовка
                   fontWeight: "bold",
                   color: "#fff",
                 }}
@@ -198,7 +202,7 @@ function Navbar() {
                 {t("title").split(" ")?.[0]}
               </span>
               <br />
-              <span style={{ fontSize: "16px", color: "#fff" }}>
+              <span style={{ fontSize: "18px", color: "#fff" }}>
                 {t("title").split(" ")?.[1]}
               </span>
             </div>
@@ -215,7 +219,7 @@ function Navbar() {
             <Icon
               icon="gg:menu-right"
               className="text-white"
-              style={{ fontSize: "24px" }}
+              style={{ fontSize: "28px" }} // Увеличенный размер иконки
             />
           </button>
 
@@ -238,18 +242,15 @@ function Navbar() {
                 </li>
               ))}
             </ul>
+
             {/* Выпадающее меню выбора языка */}
             <div className="dropdown ms-3">
               <button
                 className="btn dropdown-toggle"
                 type="button"
-                id="desktopLanguageDropdown"
+                id="languageDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{
-                  color: "#fff",
-                  fontWeight: "bold",
-                }}
               >
                 <img
                   src={
@@ -267,7 +268,11 @@ function Navbar() {
               </button>
               <ul
                 className="dropdown-menu"
-                aria-labelledby="desktopLanguageDropdown"
+                aria-labelledby="languageDropdown"
+                style={{
+                  borderRadius: "10px", // Скругление углов
+                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", // Тень
+                }}
               >
                 {[
                   { code: "uz", flag: uz },
@@ -275,7 +280,13 @@ function Navbar() {
                   { code: "en", flag: en },
                 ].map(({ code, flag }) => (
                   <li key={code} onClick={() => changeLang(code)}>
-                    <div className="dropdown-item d-flex align-items-center">
+                    <div
+                      className="dropdown-item d-flex align-items-center"
+                      style={{
+                        padding: "10px 15px", // Отступы
+                        fontSize: "16px",
+                      }}
+                    >
                       <img
                         src={flag}
                         alt={code}

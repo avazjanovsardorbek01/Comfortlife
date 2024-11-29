@@ -5,3 +5,103 @@
     margin-top: 50px !important;
   }
 }
+.section-5 {
+  background-color: #f8f9fa; /* Легкий фон */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.person {
+  height: 350px; /* Фиксированная высота для всех карточек */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Эффекты при наведении */
+}
+
+.person:hover {
+  transform: translateY(-5px); /* Поднимает карточку при наведении */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+}
+
+.person img {
+  height: 90px; /* Высота изображения */
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.person:hover img {
+  transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+}
+
+.person-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+}
+
+.person-contents h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.person-contents .meta {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.person-contents p {
+  font-size: 1rem;
+  color: #6c757d;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 100px; /* Ограничение по высоте для текста */
+}
+
+/* Навигация */
+#testimonial-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+#testimonial-nav .prev,
+#testimonial-nav .next {
+  background-color: #956d57;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+#testimonial-nav .prev:hover,
+#testimonial-nav .next:hover {
+  background: #4f4e4e;
+}
+
+/* Адаптивные стили для слайдера */
+@media (max-width: 768px) {
+  .person {
+    height: 400px;
+  }
+
+  .person img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .person {
+    height: 400px;
+  }
+
+  .person img {
+    height: 110px;
+  }
+}

@@ -7,6 +7,8 @@ import bukhara3 from "../../assets/comfortlife_3-min.webp";
 import bukhara4 from "../../assets/comfortlife_4-min.webp";
 import viner from "../../assets/viner.jpg";
 import mmm from "../../assets/mmm.jpg";
+import rauf from "../../assets/rauf.jpg";
+
 import joxon from "../../assets/joxon.jpg";
 import noResult from "../../assets/no_results.png";
 import poltoran_egor from "../../assets/poltoran_egor.png";
@@ -129,26 +131,25 @@ function Main() {
         img: poltoran_egor,
         name: t("Poltoran Egor"),
         position: t("director"),
-        description:   t("agent_description")
-            .replace("#name", t("Poltoran Egor"))
-            .replace("#position", t("director")),
+        description: t("agent_description")
+          .replace("#name", t("Poltoran Egor"))
+          .replace("#position", t("director")),
       },
       {
         img: mexa_gulyamova,
         name: t("Mexa Gulyamova"),
         position: t("manager"),
-        description:  t("agent_description")
-            .replace("#name", t("Mexa Gulyamova"))
-            .replace("#position", t("manager")),
+        description: t("agent_description")
+          .replace("#name", t("Mexa Gulyamova"))
+          .replace("#position", t("manager")),
       },
       {
-        img: sanjar,
-        name: t("Maminov Sanjar"),
-        position: t("rieltor"),
-        description:  t("agent_description")
-            .replace("#name", t("Maminov Sanjar"))
-            .replace("#position", t("rieltor")),
-      }
+        img: rauf,
+        name: "Bauyetdinov Rauf",
+        position: t("marketolog"),
+        description:
+          "Эксперт в области маркетинга, помогает компаниям развивать бренды и увеличивать продажи.",
+      },
     ];
   }, [t]);
   console.log("main", { data });
@@ -410,7 +411,7 @@ function Main() {
           </div>
         </div>
       </div>
-
+      {/* Обьекты */}
       <section className="features-1">
         <div className="container">
           <div className="row">
@@ -562,7 +563,7 @@ function Main() {
           </div>
         </div>
       </div>
-
+      {/* Оффис */}
       <div className="section section-4 bg-light">
         <div className="container">
           <div className="row justify-content-center text-center mb-5">
@@ -687,49 +688,67 @@ function Main() {
           </div>
         </div>
       </div>
-
-      <div className="section section-5 bg-light">
+      {/* Наши клиенты */}
+      <div className="section section-5 bg-light py-5">
         <div className="container">
-          <div className="row justify-content-center text-center mb-3">
-            <div className="col-lg-6 mb-5">
+          <div className="row justify-content-center text-center mb-5">
+            <div className="col-lg-6 mb-4">
               <h2 className="font-weight-bold heading text-primary mb-3">
                 {t("our_agents")}
               </h2>
-              <p className="text-black-50">{t("our_agents_value")}</p>
+              <p className="text-muted">{t("our_agents_value")}</p>
             </div>
           </div>
           <div className="agents-slider-wrap">
             <div className="agents-slider">
               <Slide
-                slidesToScroll={2}
-                slidesToShow={2}
+                slidesToScroll={3}
+                slidesToShow={3}
                 indicators={false}
                 autoplay={false}
                 arrows={false}
                 responsive={responsiveSettingsAgents}
               >
-                {agents.map((agent) => {
+                {agents.map((agent, index) => {
                   return (
                     <div className="item" key={agent.name}>
-                      <div className="h-100 person">
-                        <img
-                          src={agent.img}
-                          alt="Image"
-                          className="img-fluid"
+                      <div
+                        className="h-100 person bg-white rounded shadow-sm p-4 text-center"
+                        style={{
+                          height: "400px", // Одинаковая высота
+                        }}
+                      >
+                        <div
+                          className="image-container mb-4"
                           style={{
-                            pointerEvents: "none",
-                            height: "90px",
-                            objectFit: "cover",
-                            objectPosition: "center",
+                            width: "150px",
+                            height: "150px",
+                            margin: "0 auto",
+                            overflow: "hidden",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            clipPath: "circle(50%)",
                           }}
-                        />
-
+                        >
+                          <img
+                            src={agent.img}
+                            alt={agent.name}
+                            className="img-fluid"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              objectPosition: index === 1 ? "top" : "center",
+                            }}
+                          />
+                        </div>
                         <div className="person-contents">
-                          <h2 className="mb-0">{agent.name}</h2>
-                          <span className="meta d-block mb-3">
+                          <h3 className="mb-2 text-dark">{agent.name}</h3>
+                          <span className="meta d-block mb-3 text-muted">
                             {agent.position}
                           </span>
-                          <p>{agent.description}</p>
+                          <p className="text-muted">{agent.description}</p>
                         </div>
                       </div>
                     </div>
@@ -738,12 +757,12 @@ function Main() {
               </Slide>
             </div>
           </div>
-          <div className="col-lg-12 text-lg-end mt-2">
+          <div className="col-lg-12 text-lg-end mt-4">
             <p>
               <Link
                 to={"/about"}
                 onClick={() => localStorage.setItem("agent", "true")}
-                className="btn btn-primary text-white py-3 px-4"
+                className="show-agents btn btn-primary text-white  py-3 px-4 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
               >
                 {t("see_all_agents")}
               </Link>

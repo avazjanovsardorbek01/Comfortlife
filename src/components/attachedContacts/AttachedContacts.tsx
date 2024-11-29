@@ -1,7 +1,9 @@
+import "./attachedContacts.scss";
+
 function AttachedContacts() {
   return (
     <div
-      className="m-sm-2 position-fixed top-50 start-0 translate-middle-y"
+      className="m-sm-2 position-fixed top-50 start-0 translate-middle-y attached-contacts"
       style={{
         zIndex: "999",
       }}
