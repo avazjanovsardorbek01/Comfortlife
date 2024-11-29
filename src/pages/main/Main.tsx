@@ -13,7 +13,7 @@ import joxon from "../../assets/joxon.jpg";
 import noResult from "../../assets/no_results.png";
 import poltoran_egor from "../../assets/poltoran_egor.png";
 import mexa_gulyamova from "../../assets/mexa_gulyamova.png";
-import sanjar from "../../assets/sanjar.jpg";
+// import sanjar from "../../assets/sanjar.jpg";
 import "./main.scss";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
