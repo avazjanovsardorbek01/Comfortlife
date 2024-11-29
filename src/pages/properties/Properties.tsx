@@ -86,7 +86,8 @@ function Properties() {
                 offersFound={itemsList}
                 target={""}
               />
-              {/*NOTE <form
+              {/* NOTE{" "}
+              <form
                 action="#"
                 className="form-search m-auto d-flex align-items-stretch col-lg-10 w-100"
                 data-aos="fade-up"

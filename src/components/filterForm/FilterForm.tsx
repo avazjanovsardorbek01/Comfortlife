@@ -331,7 +331,7 @@ function FilterForm({
                   smooth
                   spy
                   type="button"
-                  className="form-control btn btn-light rounded text-truncate position-relative"
+                  className="form-sentence form-control btn btn-light rounded text-truncate position-relative"
                   style={{
                     marginRight: 0,
                     paddingLeft: "10px",

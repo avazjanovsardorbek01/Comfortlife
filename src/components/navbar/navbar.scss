@@ -59,6 +59,16 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  color: #fff;
+}
+.btn.dropdown-toggle:hover {
+  color: #fff;
+}
+.offcanvas .btn.dropdown-toggle {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(52, 58, 64);
 }
 
 .dropdown-menu {
@@ -79,3 +89,4 @@
     display: none;
   }
 }
+/* Button color inside navbar */

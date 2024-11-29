@@ -8,7 +8,6 @@ import bukhara4 from "../../assets/comfortlife_4-min.webp";
 import viner from "../../assets/viner.jpg";
 import mmm from "../../assets/mmm.jpg";
 import rauf from "../../assets/rauf.jpg";
-
 import joxon from "../../assets/joxon.jpg";
 import noResult from "../../assets/no_results.png";
 import poltoran_egor from "../../assets/poltoran_egor.png";
@@ -266,7 +265,7 @@ function Main() {
               <p>
                 <Link
                   to={"/properties"}
-                  className="btn btn-primary text-white py-3 px-4"
+                  className="all-objects-btn btn btn-primary text-white py-3 px-4"
                 >
                   {t("viewAllProperties")}
                 </Link>

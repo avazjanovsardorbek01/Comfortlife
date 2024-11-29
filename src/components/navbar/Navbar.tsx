@@ -110,18 +110,17 @@ function Navbar() {
           </ul>
           <div className="dropdown mt-3">
             <button
-              className="btn dropdown-toggle w-100"
+              className="language-btn  btn dropdown-toggle w-100"
               type="button"
               id="languageDropdown"
               data-bs-toggle="dropdown"
               aria-expanded="false"
               style={{
                 backgroundColor: "#f8f9fa", // Светлый фон
-                border: "1px solid #ced4da", // Обводка
+                border: "1px solid", // Обводка
                 borderRadius: "10px",
                 padding: "10px 15px",
                 fontWeight: "bold",
-                color: "#343a40",
               }}
             >
               <img
