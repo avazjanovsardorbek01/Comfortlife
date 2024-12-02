@@ -278,3 +278,18 @@ h2.heading {
     gap: 0.5rem;
   }
 }
+
+@media (max-width: 462px) {
+  .custom-btn {
+    padding: 0; /* Убираем внутренние отступы */
+    font-size: 12px; /* Уменьшаем размер текста */
+    border-radius: 1.5rem; /* Закругленные края */
+  }
+}
+@media (max-width: 361px) {
+  .custom-btn {
+    padding: 0; /* Убираем отступы */
+    font-size: 10px; /* Еще меньше размер текста */
+    border-radius: 1.5rem; /* Закругленные края */
+  }
+}

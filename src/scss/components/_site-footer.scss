@@ -1,78 +1,235 @@
 .site-footer {
-	background: #efefef;
-	font-size: 14px;	
-	color: #888;
-	padding: 70px 0;
+  background: #efefef;
+  font-size: 14px;
+  color: #888;
+  padding: 70px 0;
 
+  a {
+    color: #777;
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    &:hover {
+      color: $black;
+      text-decoration: none;
+      &:before {
+        background: rgba($primary, 1);
+      }
+    }
+  }
 
-	a {
-		color: #777;
-		position: relative;
-		display: inline-block;
-		text-decoration: underline;
-		&:hover {
-			color: $black;
-			text-decoration: none;
-			&:before {
-				background: rgba($primary, 1);
-			}
-		}
-	}
+  .footer-cta {
+    h2 {
+      font-size: 30px;
+      color: $primary;
+    }
+  }
+  .btn {
+    &:before {
+      display: none;
+    }
+  }
+  .widget {
+    margin-bottom: 40px;
+    display: block;
+    h3 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      color: $primary;
+    }
 
-	.footer-cta {
-		h2 {
-			font-size: 30px;
-			color: $primary;
-		}
-	}
-	.btn {
-		&:before {
-			display: none;
-		}
-	}
-	.widget {
-		margin-bottom: 40px;
-		display: block;
-		h3 {
-			font-size: 12px;
-			font-weight: 700;
-			text-transform: uppercase;
-			margin-bottom: 15px;
-			color: $primary;
-		}
+    .links {
+      width: 150px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
 
-		.links {
-			width: 150px;
-			li {
-				margin-bottom: 10px;
-			}
-		}
-	}
+  .social {
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        background: #ccc;
+        border-radius: 40%;
+        &:before {
+          display: none;
+        }
+        > span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+/* Медиазапрос для экранов от 672px до 575px */
+@media (max-width: 672px) and (min-width: 576px) {
+  .site-footer .row {
+    flex-direction: column;
+  }
 
-	.social {
-		li {
-			display: inline-block;
-			a {
-				display: inline-block;
-				width: 40px;
-				height: 40px;
-				position: relative;
-				background: #ccc;
-				border-radius: 40%;
-				&:before {
-					display: none;
-				}
-				> span {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
-				&:hover {
-					background: $primary;
-					color: $white;
-				}
-			}
-		}
-	}
+  .site-footer .widget {
+    margin-bottom: 1rem;
+  }
+
+  .site-footer .list-unstyled {
+    padding-left: 0;
+  }
+
+  .site-footer .list-inline-item {
+    margin-right: 15px;
+  }
+
+  .site-footer .social {
+    justify-content: center;
+  }
+
+  .site-footer .widget h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .site-footer address {
+    text-align: center;
+  }
+} /* Медиазапрос для экранов меньше 673px */
+/* Медиазапрос для экранов меньше 673px */
+@media (max-width: 672px) {
+  .site-footer .row {
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .site-footer .col-12 {
+    margin-bottom: 1rem;
+    text-align: center; /* Центрируем текст внутри колонок */
+  }
+
+  .site-footer .widget {
+    text-align: center; /* Центрируем текст в виджетах */
+  }
+
+  .site-footer .list-unstyled.links,
+  .site-footer .list-unstyled.social {
+    padding-left: 0; /* Убираем отступы */
+    text-align: center; /* Центрируем список */
+    margin: 0 auto;
+  }
+
+  .site-footer .list-inline-item {
+    margin: 5px 0; /* Добавляем отступы для элементов списка */
+  }
+
+  /* Социальные иконки */
+  .site-footer .social {
+    display: flex;
+    flex-wrap: wrap; /* Делаем возможным переход на новую строку */
+    justify-content: center; /* Центрируем иконки */
+  }
+
+  .site-footer .social .list-inline-item {
+    width: 45%; /* Задаем ширину для каждой иконки, чтобы они располагались по 2 в строку */
+    margin: 10px; /* Отступ между иконками */
+  }
+
+  .site-footer .widget h3 {
+    font-size: 1rem;
+    text-align: center; /* Центрируем заголовки виджетов */
+  }
+
+  .site-footer address {
+    text-align: center; /* Центрируем адрес */
+  }
+
+  .site-footer .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//* Медиазапрос для экранов от 672px до 575px */
+@media (max-width: 672px) and (min-width: 576px) {
+  .site-footer .row {
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .site-footer .widget {
+    margin-bottom: 1rem;
+  }
+
+  .site-footer .list-unstyled {
+    padding-left: 0;
+    text-align: center; /* Центрируем текст внутри списка */
+    margin: 0 auto; /* Центрируем список */
+  }
+
+  .site-footer .list-inline-item {
+    margin-right: 15px;
+  }
+
+  .site-footer .social {
+    display: flex;
+    justify-content: center; /* Центрируем иконки */
+    flex-wrap: wrap; /* Делаем возможным перенос иконок на новую строку */
+  }
+
+  .site-footer .social .list-inline-item {
+    width: 45%; /* Каждая иконка занимает 45% ширины */
+    margin: 5px; /* Добавляем отступ между иконками */
+    text-align: center; /* Центрируем иконки */
+  }
+
+  .site-footer .widget h3 {
+    font-size: 1.2rem;
+    text-align: center; /* Центрируем заголовки виджетов */
+  }
+
+  .site-footer address {
+    text-align: center; /* Центрируем адрес */
+  }
+}
+
+/* Медиазапрос для экранов меньше 576px */
+@media (max-width: 575px) {
+  .site-footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-footer .col-12 {
+    margin-bottom: 1rem;
+  }
+
+  .site-footer .list-unstyled.links,
+  .site-footer .list-unstyled.social {
+    text-align: center;
+  }
+
+  .site-footer .social {
+    flex-direction: column;
+    align-items: center; /* Выравниваем иконки по центру */
+  }
+
+  .site-footer .list-inline-item {
+    margin: 5px 0;
+  }
+
+  .site-footer .widget h3 {
+    font-size: 1rem;
+  }
 }
