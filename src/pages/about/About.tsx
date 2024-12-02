@@ -349,12 +349,9 @@ const About = () => {
           <div className="col-lg-7 mx-auto text-center">
             <h2 className="mb-4">{t("growing_community")}</h2>
             <p>
-              <Link
-                to={"/contact"}
-                className="btn btn-primary text-white py-3 px-4"
-              >
+              <button className="btn custom-btn text-white py-3 px-4">
                 {t("apply_community")}
-              </Link>
+              </button>
             </p>
           </div>
         </div>
@@ -365,13 +362,13 @@ const About = () => {
       >
         <div className="container">
           <div className="row mb-5 align-items-center">
-            <div className="col-md-6">
+            <div className="col-md-6 text-center text-md-start">
               <h2 className="font-weight-bold heading text-primary mb-4 mb-md-0">
                 {t("our_agents")}
               </h2>
             </div>
-            <div className="col-md-6 text-md-end">
-              <div id="testimonial-nav">
+            <div className="col-md-6 text-md-end text-center">
+              <div id="testimonial-nav" className="testimonial-nav">
                 <span
                   className="prev"
                   data-controls="prev"
@@ -405,7 +402,7 @@ const About = () => {
                 duration={3000}
               >
                 {agents
-                  .filter((agent) => agent.name !== "Maminov Sanjar") // Фильтруем агента
+                  .filter((agent) => agent.name !== "Maminov Sanjar")
                   .map((agent) => (
                     <div className="item" key={agent.name}>
                       <div className="person card">

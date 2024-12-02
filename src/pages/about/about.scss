@@ -105,3 +105,176 @@
     height: 110px;
   }
 }
+/* Base styles */
+.text-center {
+  text-align: center;
+}
+
+.col-lg-7 {
+  width: 58.333333%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.98); /* Button press effect */
+}
+
+/* Tablet styles */
+@media (max-width: 992px) {
+  .col-lg-7 {
+    width: 80%; /* Adjust width for tablets */
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.25rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+  .col-lg-7 {
+    width: 100%; /* Full width */
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem; /* Smaller border-radius for mobile */
+  }
+}
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.25rem; /* Меньший размер заголовка */
+    margin-bottom: 1rem; /* Уменьшение отступа под заголовком */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Меньшие внутренние отступы */
+    font-size: 0.85rem; /* Уменьшенный размер текста */
+    border-radius: 1rem; /* Чуть меньший радиус */
+    margin-top: 0.5rem; /* Уменьшение отступа сверху */
+  }
+
+  .col-lg-7 {
+    padding: 0 1rem; /* Уменьшение горизонтальных отступов */
+  }
+}
+/* Базовые стили для кнопки */
+.custom-btn {
+  background-color: #956d57; /* Задаем цвет */
+  border: none; /* Убираем границу */
+  border-radius: 1.5rem; /* Закругленные края */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #4f4e4e; /* Темнее при наведении */
+}
+
+.custom-btn:active {
+  background-color: #6a4838; /* Темнее при клике */
+  transform: scale(0.98); /* Легкий эффект нажатия */
+}
+
+.custom-btn.text-white {
+  color: #fff; /* Белый текст */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 400px) {
+  .custom-btn {
+    font-size: 0.85rem; /* Уменьшенный размер текста */
+    padding: 0.5rem 1rem; /* Компактные отступы */
+    border-radius: 1rem; /* Чуть меньший радиус */
+  }
+}
+/* Базовые стили для навигации */
+#testimonial-nav {
+  display: flex;
+  justify-content: flex-end; /* Выравнивание по правому краю по умолчанию */
+  gap: 1rem; /* Расстояние между элементами */
+}
+
+#testimonial-nav .prev,
+#testimonial-nav .next {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff; /* Основной цвет */
+  padding: 0.5rem 1rem;
+  border: 1px solid #956d57; /* Рамка */
+  border-radius: 1rem; /* Закругление */
+  transition: all 0.3s ease;
+}
+
+#testimonial-nav .prev:hover,
+#testimonial-nav .next:hover {
+  background-color: #956d57; /* Цвет фона при наведении */
+  color: #fff; /* Белый текст */
+}
+
+/* Адаптация для экранов меньше 768px */
+@media (max-width: 768px) {
+  #testimonial-nav {
+    justify-content: center; /* Выравнивание по центру */
+    gap: 0.5rem; /* Меньший промежуток между кнопками */
+  }
+
+  #testimonial-nav .prev,
+  #testimonial-nav .next {
+    font-size: 0.9rem; /* Уменьшенный текст */
+    padding: 0.4rem 0.8rem; /* Компактные отступы */
+  }
+}
+/* Основной стиль для заголовка */
+h2.heading {
+  text-align: left; /* По умолчанию заголовок выравнен влево */
+  font-size: 2rem; /* Размер текста */
+}
+
+/* Для экрана меньше 768px */
+@media (max-width: 768px) {
+  h2.heading {
+    text-align: center; /* Центрируем текст */
+    font-size: 1.5rem; /* Уменьшаем размер текста */
+    margin-bottom: 1.5rem; /* Добавляем отступ снизу */
+  }
+
+  /* Центровка элементов навигации (prev и next) */
+  #testimonial-nav {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
